@@ -7,8 +7,30 @@ export default function MenuContent({ open = false }) {
     <div>
       <Fade in={Boolean(open)}>
         <div className="fixed top-0 left-0 h-full w-full bg-white flex justify-center items-end flex-col p-14">
-          <MenuContentItem label="Project" to="" />
-          <MenuContentItem label="Service" to="" />
+          <MenuContentItem
+            open={Boolean(open)}
+            delay={100}
+            label="Services"
+            to=""
+          />
+          <MenuContentItem
+            open={Boolean(open)}
+            delay={200}
+            label="Projects"
+            to=""
+          />
+          <MenuContentItem
+            open={Boolean(open)}
+            delay={300}
+            label="Testimonials"
+            to=""
+          />
+          <MenuContentItem
+            open={Boolean(open)}
+            delay={400}
+            label="Contacts"
+            to=""
+          />
         </div>
       </Fade>
     </div>
