@@ -1,9 +1,14 @@
 import React from 'react'
+import Logo from './Logo'
+import Menu from './Menu'
 
 export default function Header() {
-	return (
-		<div>
-			
-		</div>
-	)
+  return (
+    <header>
+      <div className="flex justify-between m-8">
+        <Logo />
+        <Menu />
+      </div>
+    </header>
+  )
 }

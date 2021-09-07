@@ -31,9 +31,9 @@ module.exports = {
       backgroundSize: {
         '120': '30rem',
       },
-    },
-    fontSize: {
-      xs: ['.75rem', 'inherit'],
+      fontSize: {
+        xs: ['.75rem', 'inherit'],
+      },
     },
     cursor: {
       crosshair: 'crosshair',

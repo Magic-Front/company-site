@@ -7,13 +7,15 @@ export default function Layout({ children = <></>, fullWidth = false }) {
   return (
     <div>
       <Header />
-      {Boolean(fullWidth) ? (
-        <div id="page_container">{children}</div>
-      ) : (
-        <Container>
+      <main>
+        {Boolean(fullWidth) ? (
           <div id="page_container">{children}</div>
-        </Container>
-      )}
+        ) : (
+          <Container>
+            <div id="page_container">{children}</div>
+          </Container>
+        )}
+      </main>
       <Footer />
     </div>
   )
