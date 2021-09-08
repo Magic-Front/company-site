@@ -12,7 +12,9 @@ export default function Layout({ children = <></>, fullWidth = false }) {
           <div id="page_container">{children}</div>
         ) : (
           <Container>
-            <div id="page_container">{children}</div>
+            <div className="z-0" id="page_container">
+              {children}
+            </div>
           </Container>
         )}
       </main>
