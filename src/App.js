@@ -1,12 +1,15 @@
 import { BrowserRouter as Router } from 'react-router-dom'
+import 'aos/dist/aos.css'
 import './App.css'
 import routes from './routes'
 import PrivateRoute from './routes/Private'
 import PublicRoute from './routes/Public'
 import SplitRoute from './routes/Split'
+import AOS from 'aos';
 
 const base = process.env.PUBLIC_URL || '/'
 function App() {
+  AOS.init();
   return (
     <Router basename={base}>
       {routes.map((route) => {

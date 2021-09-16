@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       colors: {
         default: '#474747',
-        'bg-default': '#F7F7F7',
+        dark: '#1F1F1F',
       },
       screens: {
         sm: '600px',
@@ -38,6 +38,16 @@ module.exports = {
       fontSize: {
         xs: ['.75rem', 'inherit'],
       },
+      keyframes: {
+        change: {
+          '0%': { opacity: 0, color: 'white'},
+          '80%': { opacity: 1, color: 'white'},
+          '100%': {opacity: 1, color: 'white'},
+        }
+      }
+    },
+    animation: {
+      change: 'change 5s'
     },
     cursor: {
       crosshair: 'crosshair',
@@ -50,6 +60,7 @@ module.exports = {
       width: ['first'],
       height: ['first'],
       position: ['first'],
+      animation: ['responsive', 'motion-safe', 'motion-reduce']
     },
     // mixBlendMode: ['hover', 'focus'],
     blur: ['hover', 'focus'],
