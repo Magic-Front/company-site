@@ -8,7 +8,7 @@ export default function Menu() {
   const toggleOpen = () => setIsOpen((s = false) => !Boolean(s))
 
   return (
-    <div>
+    <div className="fixed right-0">
       <MenuButton onClick={toggleOpen} />
       <MenuContent open={Boolean(isOpen)} />
     </div>

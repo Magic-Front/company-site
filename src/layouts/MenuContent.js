@@ -4,9 +4,9 @@ import MenuContentItem from './MenuContentItem'
 
 export default function MenuContent({ open = false }) {
   return (
-    <div>
+    <div className="z-auto">
       <Fade in={Boolean(open)}>
-        <div className="z-10 fixed top-0 left-0 h-screen w-screen bg-white flex justify-center items-end flex-col p-14">
+        <div className="fixed top-0 left-0 h-screen w-screen bg-white flex justify-center items-end flex-col p-14">
           <MenuContentItem
             open={Boolean(open)}
             delay={100}
