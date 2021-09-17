@@ -7,12 +7,12 @@ export default function TitleComponent(props) {
         <div>
           {
             (props?.titles ?? []).map((text, i) => {
-              return <div className="text-6xl md:text-8xl lg:text-8xl xl:text-8xl font-bold pt-7 text-white animate-default">
+              return <div key={i} className="text-6xl md:text-8xl lg:text-8xl xl:text-8xl font-bold pt-7 animate-default">
                 {
-                  text?.map((t, j)=>(
-                    i===0&&j===2||i===1?
-                    <span data-aos="fade-zoom-in" data-aos-duration="500" data-aos-delay={ i*700 + j*300 } data-aos-offset="0" key={j} class="pr-12 text-black">{t}</span>:
-                    <span data-aos="fade-zoom-in" data-aos-duration="500" data-aos-delay={ i*700 + j*300 } data-aos-offset="0" key={j} class="pr-12">{t}</span>
+                  text?.map((t, j) => (
+                    i === 0 && j === 2 || i === 1 ?
+                      <span data-aos="fade-zoom-in" data-aos-duration="500" data-aos-delay={i * 700 + j * 300} data-aos-offset="0" key={j} className="pr-12 text-white">{t}</span> :
+                      <span data-aos="fade-zoom-in" data-aos-duration="500" data-aos-delay={i * 700 + j * 300} data-aos-offset="0" key={j} className="pr-12 text-white">{t}</span>
                   ))
                 }
               </div>

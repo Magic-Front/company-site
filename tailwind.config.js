@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       colors: {
         default: '#474747',
+        light: '#F7F7F7',
+        title: '#ECECEC',
         dark: '#1F1F1F',
+
       },
       screens: {
         sm: '600px',
@@ -37,6 +40,10 @@ module.exports = {
       },
       fontSize: {
         xs: ['.75rem', 'inherit'],
+        '10xl': '13rem',
+        '11xl': '15rem',
+        '12xl': '17rem',
+        
       },
       keyframes: {
         change: {
