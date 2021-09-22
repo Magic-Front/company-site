@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionComponent from 'components/SectionComponent'
 import TitleComponent from 'components/TitleComponent'
-import Data from './JsonData'
+import Data from './Data'
 
 const titles = Data.intro.titles
 const classes = Data.intro.classes

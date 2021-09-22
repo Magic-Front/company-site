@@ -2,7 +2,7 @@ import React from 'react'
 import ImageComponent from 'components/ImageComponent'
 import SectionComponent from 'components/SectionComponent'
 import TitleComponent from 'components/TitleComponent'
-import Data from './JsonData'
+import Data from './Data'
 
 const titles = Data.project.titles
 const classes = Data.project.classes
