@@ -30,7 +30,7 @@ const about = {
     ],
   ],
   classesTopic: [
-    'px-6 text-4xl md:text-5xl lg:text-5xl font-bold text-black',
+    'px-3 text-4xl md:text-5xl lg:text-5xl font-bold text-black',
     'text-base pt-14',
   ],
 }

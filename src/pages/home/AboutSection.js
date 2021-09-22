@@ -34,7 +34,7 @@ export default function AboutSection() {
         })}
       </SectionComponent>
       <SectionComponent _background="bg-white h-full">
-        <div className="lg:px-12 xl:px-64 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 xl:gap-28 mb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 xl:gap-28 mb-36">
           <div className="lg:pr-28 xl:pr-28">
             {topics?.slice(0, topics?.length / 2).map((topic, i) => {
               return (
