@@ -1,16 +1,23 @@
 import React from 'react'
+import SectionComponent from 'components/SectionComponent'
+import TitleComponent from 'components/TitleComponent'
+import Data from './JsonData'
 
-export default function IntroSection() {
+const titles = Data.intro.titles
+const classes = Data.intro.classes
+const _aos = Data.intro._aos
+const _duration = Data.intro._duration
+
+export default function IntroSection(children = <></>) {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-light">
-      <div className="container mx-auto px-6 lg:px-12 xl:px-64" >
-        <h1 className="mb-8 text-9xl font-extrabold" data-aos="fade-up" data-aos-duration="3000">Heading</h1>
-        <h2 className="mb-16 text-5xl font-bold" data-aos="fade-up" data-aos-duration="3000">Sub Heading</h2>
-        <p className="text-xl delay-1000" data-aos="fade-up" data-aos-duration="3000">
-          This is test content. it will be replaced with real content. at the
-          moment they are demo.
-        </p>
-      </div>
-    </div>
+    <SectionComponent>
+      <TitleComponent
+        titles={titles}
+        classes={classes}
+        _aos={_aos}
+        _duration={_duration}
+        isAnimate={true}
+      />
+    </SectionComponent>
   )
 }

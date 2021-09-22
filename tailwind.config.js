@@ -35,6 +35,9 @@ module.exports = {
       margin: {
         '-1/2': '-50%',
       },
+      height: {
+        half: '50vh'
+      },
       backgroundSize: {
         '120': '30rem',
       },
