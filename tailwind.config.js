@@ -9,7 +9,7 @@ module.exports = {
         light: '#F7F7F7',
         title: '#ECECEC',
         dark: '#1F1F1F',
-
+        side: '#C8C8C8',
       },
       screens: {
         sm: '600px',

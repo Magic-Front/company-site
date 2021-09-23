@@ -9,15 +9,15 @@ const _aos = Data.intro._aos
 const _duration = Data.intro._duration
 
 export default function IntroSection(children = <></>) {
-  return (
-    <SectionComponent>
-      <TitleComponent
-        titles={titles}
-        classes={classes}
-        _aos={_aos}
-        _duration={_duration}
-        isAnimate={true}
-      />
-    </SectionComponent>
-  )
+	return (
+		<SectionComponent>
+			<TitleComponent
+				titles={titles}
+				classes={classes}
+				_aos={_aos}
+				_duration={_duration}
+				isAnimate={true}
+			/>
+		</SectionComponent>
+	)
 }
