@@ -1,23 +1,25 @@
-import React from 'react'
 import SectionComponent from 'components/SectionComponent'
-import TitleComponent from 'components/TitleComponent'
-import Data from './Data'
-
-const titles = Data.intro.titles
-const classes = Data.intro.classes
-const _aos = Data.intro._aos
-const _duration = Data.intro._duration
+import React from 'react'
 
 export default function IntroSection(children = <></>) {
-	return (
-		<SectionComponent>
-			<TitleComponent
-				titles={titles}
-				classes={classes}
-				_aos={_aos}
-				_duration={_duration}
-				isAnimate={true}
-			/>
-		</SectionComponent>
-	)
+  return (
+    <SectionComponent>
+      <div
+        className="mb-8 text-7xl font-extrabold"
+        data-aos="fade-up"
+        data-aos-duration={3000}
+        // data-aos-delay={isAnimate && _delay}
+      >
+        Investing for Impact
+      </div>
+      <div
+        className="text-xl delay-1000"
+        data-aos="fade-up"
+        data-aos-duration={3000}
+        // data-aos-delay={isAnimate && _delay}
+      >
+        Advisory & investment firm dedicated to buildinga better planet.
+      </div>
+    </SectionComponent>
+  )
 }
