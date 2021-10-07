@@ -1,4 +1,3 @@
-import { Fade } from '@material-ui/core'
 import SectionComponent from 'components/SectionComponent'
 import TitleComponent from 'components/TitleComponent'
 import React from 'react'
