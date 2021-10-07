@@ -1,33 +1,36 @@
 import React from 'react'
 import ProjectComponent from 'components/ProjectComponent'
 import SectionComponent from 'components/SectionComponent'
-import TitleComponent from 'components/TitleComponent'
-import SidebarComponent from 'components/SidebarComponent'
 import Data from './Data'
 
-const titles = Data.project.titles
-const classes = Data.project.classes
-const images = Data.project.images
-const options = Data.project.options
 export default function ProjectSection() {
-	return (
-		<div>
-			<SectionComponent>
-				<TitleComponent titles={titles} classes={classes} />
-			</SectionComponent>
-			<div className="relative">
-				<SidebarComponent options={options} />
-				{images.map((image, i) => {
-					return (
-						<div key={i}>
-							<SectionComponent>
-								<ProjectComponent _class={image._class} _url={image._url} />
-							</SectionComponent>
-							<div className="h-half bg-light"></div>
-						</div>
-					)
-				})}
-			</div>
-		</div>
-	)
+  return (
+    <div>
+      <SectionComponent>
+        <div className={Data.project.title.textClass}>
+          {Data.project.title.text}
+        </div>
+      </SectionComponent>
+      <div className="relative">
+        <div className="absolute right-5 top-16 text-side lg:text-xl xl:text-2xl">
+          {Data.project.subList.map((item, i) => {
+            return <div key={i}>{item.name}</div>
+          })}
+        </div>
+        {Data.project.images.imgList.map((imgItem, index) => {
+          return (
+            <div key={index}>
+              <SectionComponent>
+                <ProjectComponent
+                  imgClss={Data.project.images.imgClss}
+                  imgUrl={imgItem.url}
+                />
+              </SectionComponent>
+              <div className="h-half bg-light"></div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
 }

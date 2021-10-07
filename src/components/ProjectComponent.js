@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ImageComponent({ _class = '', _url = '' }) {
+export default function ImageComponent({ imgClss = '', imgUrl = '' }) {
 	return (
 		<div>
-			<img className={_class} src={_url} alt="project" />
+			<img className={imgClss} src={imgUrl} alt="project" />
 		</div>
 	)
 }
