@@ -17,6 +17,7 @@ export default function AboutSection() {
           {(text.split(' ') ?? [])?.map((wordContent, wordIndex) => (
             <div
               key={wordIndex}
+              className="p-6 text-white"
               data-aos="fade-zoom-in"
               data-aos-duration={500}
               data-aos-delay={wordIndex * 300}
