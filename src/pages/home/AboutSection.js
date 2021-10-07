@@ -19,17 +19,10 @@ export default function AboutSection() {
             <div
               key={wordIndex}
               data-aos="fade-zoom-in"
-              data-aos-duration={0}
-              data-aos-delay={wordIndex > 9 ? 3000 : 0}
+              data-aos-duration={500}
+              data-aos-delay={wordIndex * 300}
             >
-              <div
-                className="p-6 text-white"
-                data-aos="fade-zoom-in"
-                data-aos-duration={500}
-                data-aos-delay={(wordIndex % 10) * 300}
-              >
-                {wordContent}
-              </div>
+              {wordContent}
             </div>
           ))}
         </div>
