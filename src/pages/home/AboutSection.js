@@ -1,37 +1,38 @@
-import React from 'react'
+import { Fade } from '@material-ui/core'
 import SectionComponent from 'components/SectionComponent'
 import TitleComponent from 'components/TitleComponent'
+import React from 'react'
 import Data from './Data'
 
-const titles = Data.about.titles
-const classesTitle = Data.about.classesTitle
 const topics = Data.about.topics
 const classesTopic = Data.about.classesTopic
+
+const text =
+  'Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet.'
 
 export default function AboutSection() {
   return (
     <>
-      <SectionComponent id="about-us" _background="bg-dark h-screen">
-        {titles.map((title, i) => {
-          return (
+      <SectionComponent id="about-us" _background="bg-dark min-h-screen ">
+        <div className="flex flex-wrap text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
+          {(text.split(' ') ?? [])?.map((wordContent, wordIndex) => (
             <div
-              className="flex text-6xl md:text-8xl lg:text-8xl xl:text-8xl font-bold pt-7"
-              key={i}
+              key={wordIndex}
+              data-aos="fade-zoom-in"
+              data-aos-duration={0}
+              data-aos-delay={wordIndex > 9 ? 3000 : 0}
             >
-              {title?.map((t, j) => (
-                <TitleComponent
-                  titles={[t]}
-                  classes={classesTitle}
-                  isAnimate={true}
-                  _aos="fade-zoom-in"
-                  _duration="500"
-                  _delay={i * 700 + j * 300}
-                  key={j}
-                />
-              ))}
+              <div
+                className="p-6 text-white"
+                data-aos="fade-zoom-in"
+                data-aos-duration={500}
+                data-aos-delay={(wordIndex % 10) * 300}
+              >
+                {wordContent}
+              </div>
             </div>
-          )
-        })}
+          ))}
+        </div>
       </SectionComponent>
       <SectionComponent _background="bg-white h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 xl:gap-28 mb-36">
