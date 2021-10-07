@@ -23,7 +23,8 @@ const textList = [
       'We can save a project with a fast-approaching deadline or develop a project from scratch. Majority of our clients have worked with us for many years.  90% of our clients choose to work with us again, for 75% of them we have done 5 or more projects.',
   },
 ]
-const text = 'Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet.'
+const text =
+  'Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet.'
 
 export default function AboutSection() {
   return (
@@ -35,7 +36,7 @@ export default function AboutSection() {
               key={wordIndex}
               className="p-6 text-white"
               data-aos="fade-zoom-in"
-              data-aos-duration={500}
+              data-aos-duration={3000}
               data-aos-delay={wordIndex * 300}
             >
               {wordContent}
@@ -45,23 +46,21 @@ export default function AboutSection() {
       </SectionComponent>
       <SectionComponent _background="bg-white h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-x-20 mb-36">
-            {textList.map((topic, i) => {
-                return (
-                  <div
-                    className="pt-40"
-                    data-aos="fade-up"
-                    data-aos-duration="3000"
-                    key={i}
-                  >
-                    <div className='px-3 text-5xl md:text-7xl lg:text-7xl font-bold text-black'>
-                      {topic.subTitle}
-                    </div>
-                    <div className='text-lg pt-14'>
-                      {topic.content}
-                    </div>
-                  </div>
-                )
-              })}
+          {textList.map((topic, i) => {
+            return (
+              <div
+                className="pt-40"
+                data-aos="fade-up"
+                data-aos-duration="3000"
+                key={i}
+              >
+                <div className="px-3 text-5xl md:text-7xl lg:text-7xl font-bold text-black">
+                  {topic.subTitle}
+                </div>
+                <div className="text-lg pt-14">{topic.content}</div>
+              </div>
+            )
+          })}
         </div>
       </SectionComponent>
     </>

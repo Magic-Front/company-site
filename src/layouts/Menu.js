@@ -9,7 +9,7 @@ export default function Menu() {
 
   return (
     <div className="fixed right-0">
-      <MenuButton onClick={toggleOpen} />
+      <MenuButton open={Boolean(isOpen)} onClick={toggleOpen} />
       <MenuContent open={Boolean(isOpen)} onClick={toggleOpen} />
     </div>
   )
