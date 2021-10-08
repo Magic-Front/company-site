@@ -1,32 +1,32 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import SectionComponent from "components/SectionComponent"
 import NewsComponent from "components/NewsComponent"
 
 const textList = [
   {
-    author: "By Wendy Wei",
     url: "0001.jpg",
+    author: "By Wendy Wei",
     title: "China's successful elimination of malaria, and its global impact",
     content:
       "Senior Program Officer, Malaria",
   },
   {
-    author: "By Anita Zaidi",
     url: "0003.jpg",
+    author: "By Anita Zaidi",
     title: "Geographically distributed manufacturing capacity is needed for improved global health security",
     content:
       "President, Gender Equality and Director, Vaccine Development and Surveillance, and Director, EDD, Bill Melinda Gates Foundation",
   },
   {
-    author: "By Cheikh Oumar Seydi",
     url: "0004.jpg",
+    author: "By Cheikh Oumar Seydi",
     title: "As COVID-19 cases surge, African institutions lead response efforts",
     content:
       "Director, Africa, Bill & Melinda Gates Foundation",
   },
   {
-    author: "By Mark Suzman",
     url: "0002.jpg",
+    author: "By Mark Suzman",
     title: "Work in progress: An update on our DEII journey",
     content:
       "Chif Executive Officer, Bill & MElinda Gates Foundation",
@@ -34,8 +34,11 @@ const textList = [
 ]
 const text =
   "Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet."
-
 export default function AboutSection() {
+  const [unitStamp, setUnitStamp] = useState(150)
+  useEffect(() => {
+    setUnitStamp(Math.floor(3000 / text?.split(" ").length/50) * 50);
+  }, [])
   return (
     <>
       <SectionComponent id="about-us" _background="bg-dark min-h-screen ">
@@ -43,10 +46,10 @@ export default function AboutSection() {
           {(text.split(" ") ?? [])?.map((wordContent, wordIndex) => (
             <div
               key={wordIndex}
-              className="p-6 text-white"
+              className="p-6 text-white delay-200"
               data-aos="fade-zoom-in"
-              data-aos-duration={1000}
-              data-aos-delay={wordIndex * 300}
+              data-aos-duration={3000}
+              data-aos-delay={wordIndex * unitStamp}
             >
               {wordContent}
             </div>
