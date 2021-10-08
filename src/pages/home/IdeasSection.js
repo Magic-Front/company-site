@@ -52,10 +52,10 @@ export default function IdeasSection() {
         <div className="flex justify-between">
           <div className="text-4xl text-black font-bold">Latest updates</div>
           <div className="p-5">
-            <Button>
+            <Button className="rounded-full">
               <ArrowBack />
             </Button>
-            <Button>
+            <Button className="rounded-full">
               <ArrowForward />
             </Button>
           </div>
