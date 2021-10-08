@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import SectionComponent from 'components/SectionComponent'
-import NewsComponent from 'components/NewsComponent'
-import { ArrowBack, ArrowForward } from '@material-ui/icons'
 import { Button } from '@material-ui/core'
+import { ArrowBack, ArrowForward } from '@material-ui/icons'
+import NewsComponent from 'components/NewsComponent'
+import SectionComponent from 'components/SectionComponent'
+import React from 'react'
+import img0001 from 'assets/images/0001.jpg'
+import img0002 from 'assets/images/0002.jpg'
+import img0003 from 'assets/images/0003.jpg'
+import img0004 from 'assets/images/0004.jpg'
 
 const textList = [
   {
-    url: '0001.jpg',
+    img: img0001,
     author: 'By Wendy Wei',
     title: "China's successful elimination of malaria, and its global impact",
     content: 'Senior Program Officer, Malaria',
   },
   {
-    url: '0003.jpg',
+    img: img0003,
     author: 'By Anita Zaidi',
     title:
       'Geographically distributed manufacturing capacity is needed for improved global health security',
@@ -20,26 +24,21 @@ const textList = [
       'President, Gender Equality and Director, Vaccine Development and Surveillance, and Director, EDD, Bill Melinda Gates Foundation',
   },
   {
-    url: '0004.jpg',
+    img: img0004,
     author: 'By Cheikh Oumar Seydi',
     title:
       'As COVID-19 cases surge, African institutions lead response efforts',
     content: 'Director, Africa, Bill & Melinda Gates Foundation',
   },
   {
-    url: '0002.jpg',
+    img: img0002,
     author: 'By Mark Suzman',
     title: 'Work in progress: An update on our DEII journey',
     content: 'Chif Executive Officer, Bill & MElinda Gates Foundation',
   },
 ]
-const text =
-  'Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet.'
+
 export default function AboutSection() {
-  const [unitStamp, setUnitStamp] = useState(150)
-  useEffect(() => {
-    setUnitStamp(Math.floor(3000 / text?.split(' ').length / 50) * 50)
-  }, [])
   return (
     <>
       <SectionComponent id="ideas" _background="bg-light min-h-screen ">
@@ -72,7 +71,7 @@ export default function AboutSection() {
                 data-aos-duration={1000}
                 data-aos-delay={300}
               >
-                <NewsComponent data={topic} />
+                <NewsComponent img={topic?.img ?? ''} data={topic} />
               </div>
             )
           })}

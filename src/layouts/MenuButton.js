@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function MenuButton({ open = false, onClick = () => {}, ...props }) {
+  // eslint-disable-next-line
   const [isClick, setIsClick] = useState(false)
 
   const handleClick = (e) => {
