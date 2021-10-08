@@ -1,42 +1,51 @@
-import SectionComponent from 'components/SectionComponent'
-import React from 'react'
+import React from "react"
+import SectionComponent from "components/SectionComponent"
+import NewsComponent from "components/NewsComponent"
 
 const textList = [
   {
-    subTitle: 'Ruby',
+    author: "By Wendy Wei",
+    url: "0001.jpg",
+    title: "China's successful elimination of malaria, and its global impact",
     content:
-      'We specialize in Ruby on Rails programming with frontend part done with React (with Redux), Backbone, SASS and PostCSS, ES2015 and СoffeeScript, Gulp, Webpack. Also, we do fancy stuff, like Flash, Unity, WebGL, and Canvas.',
+      "Senior Program Officer, Malaria",
   },
   {
-    subTitle: '24/7',
+    author: "By Anita Zaidi",
+    url: "0003.jpg",
+    title: "Geographically distributed manufacturing capacity is needed for improved global health security",
     content:
-      'All our team members work in-house. To better interact with our clients from different parts of the world, we form a team with an individual schedule for every project. We’ll make sure to have several working hours overlap with your team wherever you are.',
+      "President, Gender Equality and Director, Vaccine Development and Surveillance, and Director, EDD, Bill Melinda Gates Foundation",
   },
   {
-    subTitle: 'Scrum',
+    author: "By Cheikh Oumar Seydi",
+    url: "0004.jpg",
+    title: "As COVID-19 cases surge, African institutions lead response efforts",
     content:
-      'We use scrum methodology and task tracking tools. You know exactly which part of the project is already done and what we are doing right now. No risk for the deadline.',
+      "Director, Africa, Bill & Melinda Gates Foundation",
   },
   {
-    subTitle: 'Long-term',
+    author: "By Mark Suzman",
+    url: "0002.jpg",
+    title: "Work in progress: An update on our DEII journey",
     content:
-      'We can save a project with a fast-approaching deadline or develop a project from scratch. Majority of our clients have worked with us for many years.  90% of our clients choose to work with us again, for 75% of them we have done 5 or more projects.',
-  },
+      "Chif Executive Officer, Bill & MElinda Gates Foundation",
+  }
 ]
 const text =
-  'Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet.'
+  "Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet."
 
 export default function AboutSection() {
   return (
     <>
       <SectionComponent id="about-us" _background="bg-dark min-h-screen ">
         <div className="flex flex-wrap text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">
-          {(text.split(' ') ?? [])?.map((wordContent, wordIndex) => (
+          {(text.split(" ") ?? [])?.map((wordContent, wordIndex) => (
             <div
               key={wordIndex}
               className="p-6 text-white"
               data-aos="fade-zoom-in"
-              data-aos-duration={3000}
+              data-aos-duration={1000}
               data-aos-delay={wordIndex * 300}
             >
               {wordContent}
@@ -44,20 +53,16 @@ export default function AboutSection() {
           ))}
         </div>
       </SectionComponent>
-      <SectionComponent _background="bg-white h-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-x-20 mb-36">
+      <SectionComponent _background="bg-white min-h-screen pt-40">
+        <div className="text-4xl text-black font-bold">Latest updates</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-x-10 mb-36">
           {textList.map((topic, i) => {
             return (
               <div
                 className="pt-40"
-                data-aos="fade-up"
-                data-aos-duration="3000"
                 key={i}
               >
-                <div className="px-3 text-5xl md:text-7xl lg:text-7xl font-bold text-black">
-                  {topic.subTitle}
-                </div>
-                <div className="text-lg pt-14">{topic.content}</div>
+                <NewsComponent data = {topic} />
               </div>
             )
           })}
