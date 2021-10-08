@@ -21,21 +21,21 @@ export default function MenuContent({ open = false, onClick = () => {} }) {
               open={Boolean(open)}
               delay={200}
               label="Our Investment thematic"
-              to=""
+              to="/#investment"
               onClick={onClick}
             />
             <MenuContentItem
               open={Boolean(open)}
               delay={300}
               label="Ideas"
-              to=""
+              to="/#ideas"
               onClick={onClick}
             />
             <MenuContentItem
               open={Boolean(open)}
               delay={400}
               label="Contacts"
-              to=""
+              to="/#contacts"
               onClick={onClick}
             />
           </div>
