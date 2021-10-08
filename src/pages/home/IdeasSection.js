@@ -38,7 +38,7 @@ const textList = [
   },
 ]
 
-export default function AboutSection() {
+export default function IdeasSection() {
   return (
     <>
       <SectionComponent id="ideas" _background="bg-light min-h-screen ">
@@ -71,7 +71,7 @@ export default function AboutSection() {
                 data-aos-duration={1000}
                 data-aos-delay={300}
               >
-                <NewsComponent img={topic?.img ?? ''} data={topic} />
+                <NewsComponent img={topic?.img ?? ''} author={topic?.author ?? ''} title ={topic?.title ?? ''} content={topic?.content ?? ''}/>
               </div>
             )
           })}

@@ -2,7 +2,7 @@ import { Button, TextField } from '@material-ui/core'
 import SectionComponent from 'components/SectionComponent'
 import React from 'react'
 
-export default function IntroSection() {
+export default function ContactSection() {
   return (
     <SectionComponent id="contacts">
       <div className="lg:grid xl:grid grid-rows-1 lg:grid-cols-3 xl:grid-cols-3 grid-flow-row gap-40">
