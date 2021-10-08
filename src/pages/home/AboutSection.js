@@ -59,8 +59,11 @@ export default function AboutSection() {
           {textList.map((topic, i) => {
             return (
               <div
-                className="pt-40"
                 key={i}
+                className="pt-40"
+                data-aos="fade-zoom-in"
+                data-aos-duration={1000}
+                data-aos-delay={300}
               >
                 <NewsComponent data = {topic} />
               </div>
