@@ -1,11 +1,11 @@
-import { Button, Input, TextField } from '@material-ui/core'
+import { Button, TextField } from '@material-ui/core'
 import SectionComponent from 'components/SectionComponent'
 import React from 'react'
 
 export default function IntroSection() {
   return (
     <SectionComponent id="contacts">
-      <div className="grid grid-rows-1 lg:grid-cols-3 xl:grid-cols-3 grid-flow-row gap-24">
+      <div className="lg:grid xl:grid grid-rows-1 lg:grid-cols-3 xl:grid-cols-3 grid-flow-row gap-40">
         <div className="col-span-2 my-auto">
           <div className="mb-8 text-3xl md:text-4xl lg:text-6xl xl:text-6xl text-black font-extrabold">
             Let's <font className="text-title">get in</font> touch
@@ -21,9 +21,8 @@ export default function IntroSection() {
               className="w-full"
             />
           </div>
-
-          <div className="pt-12">
-            <Button variant="outlined" className="w-40">
+          <div className="pt-12 pb-12">
+            <Button variant="outlined" className="w-40 h-12">
               Send
             </Button>
           </div>
