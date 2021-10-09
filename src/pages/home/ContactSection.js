@@ -29,7 +29,7 @@ export default function ContactSection() {
           </div>
         </div>
         <div className="my-auto">
-          <div className="mb-8 text-3xl text-black">{SUPPORT_EMAIL}</div>
+          <div className="mb-8 text-3xl text-black break-all">{SUPPORT_EMAIL}</div>
           <div className="mb-8 text-xl text-default">
             Have a project in mind ? Want advice on your start up? Looking to
             invest in a start up? We are excited to talk to you.

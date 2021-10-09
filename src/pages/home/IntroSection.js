@@ -5,7 +5,7 @@ export default function IntroSection() {
   return (
     <SectionComponent>
       <div
-        className="mb-8 text-7xl font-extrabold"
+        className="mb-8 text-8xl font-extrabold"
         data-aos="fade-up"
         data-aos-duration={3000}
         // data-aos-delay={isAnimate && _delay}
@@ -13,7 +13,7 @@ export default function IntroSection() {
         Investing for Impact
       </div>
       <div
-        className="text-xl delay-1000"
+        className="text-2xl delay-1000"
         data-aos="fade-up"
         data-aos-duration={3000}
         // data-aos-delay={isAnimate && _delay}

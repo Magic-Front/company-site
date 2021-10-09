@@ -15,7 +15,12 @@ export default function InvestmentSection() {
         </div>
       </SectionComponent>
       <SectionComponent id="about-us" _background="bg-dark min-h-screen ">
-        <div className="flex flex-wrap text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+        <div
+          className="flex flex-wrap text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
           {(text.split(' ') ?? [])?.map((wordContent, wordIndex) => (
             <div
               key={wordIndex}
