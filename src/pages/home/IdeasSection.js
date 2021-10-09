@@ -1,12 +1,12 @@
-import { Button } from '@material-ui/core'
+import { IconButton } from '@material-ui/core'
 import { ArrowBack, ArrowForward } from '@material-ui/icons'
-import NewsComponent from 'components/NewsComponent'
-import SectionComponent from 'components/SectionComponent'
-import React from 'react'
 import img0001 from 'assets/images/0001.jpg'
 import img0002 from 'assets/images/0002.jpg'
 import img0003 from 'assets/images/0003.jpg'
 import img0004 from 'assets/images/0004.jpg'
+import NewsComponent from 'components/NewsComponent'
+import SectionComponent from 'components/SectionComponent'
+import React from 'react'
 
 const textList = [
   {
@@ -52,26 +52,31 @@ export default function IdeasSection() {
         <div className="flex justify-between">
           <div className="text-4xl text-black font-bold">Latest updates</div>
           <div className="p-5">
-            <Button className="rounded-full">
+            <IconButton>
               <ArrowBack />
-            </Button>
-            <Button className="rounded-full">
+            </IconButton>
+            <IconButton>
               <ArrowForward />
-            </Button>
+            </IconButton>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-x-10 mb-36">
-          {textList.map((topic, i) => {
+          {textList.map((topic, topicIndex) => {
             return (
               <div
-                key={i}
+                key={topicIndex}
                 className="pt-40"
                 data-aos="fade-zoom-in"
                 data-aos-duration={1000}
                 data-aos-delay={300}
               >
-                <NewsComponent img={topic?.img ?? ''} author={topic?.author ?? ''} title ={topic?.title ?? ''} content={topic?.content ?? ''}/>
+                <NewsComponent
+                  img={topic?.img ?? ''}
+                  author={topic?.author ?? ''}
+                  title={topic?.title ?? ''}
+                  content={topic?.content ?? ''}
+                />
               </div>
             )
           })}

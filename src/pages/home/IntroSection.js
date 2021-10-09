@@ -1,7 +1,7 @@
 import SectionComponent from 'components/SectionComponent'
 import React from 'react'
 
-export default function IntroSection(children = <></>) {
+export default function IntroSection() {
   return (
     <SectionComponent>
       <div

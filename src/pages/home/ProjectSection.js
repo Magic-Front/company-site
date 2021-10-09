@@ -12,6 +12,7 @@ const imgList = [
     url: 'https://snp.agency/frassets/images/walters_bg_x1.2334ca.jpg',
   },
 ]
+
 const subList = [
   {
     name: 'CUOP',
@@ -46,6 +47,7 @@ const subList = [
     target: '',
   },
 ]
+
 export default function ProjectSection() {
   return (
     <div>
