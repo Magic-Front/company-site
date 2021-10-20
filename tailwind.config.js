@@ -1,6 +1,6 @@
 // tailwind.config.js
 module.exports = {
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: ['./src/**/*.{js,ts,jsx,tsx}', '.src/components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
@@ -10,6 +10,7 @@ module.exports = {
         title: '#ECECEC',
         dark: '#1F1F1F',
         side: '#C8C8C8',
+        orange: '#fe4501',
       },
       screens: {
         sm: '600px',

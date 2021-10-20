@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function IntroSection() {
   return (
-    <SectionComponent>
+    <SectionComponent _background = "bg-white h-screen">
       <div
         className="mb-8 text-8xl font-extrabold"
         data-aos="fade-up"
@@ -18,7 +18,7 @@ export default function IntroSection() {
         data-aos-duration={3000}
         // data-aos-delay={isAnimate && _delay}
       >
-        Advisory & investment firm dedicated to buildinga better planet.
+        <span>Advisory & investment firm focused on building a better planet.</span>
       </div>
     </SectionComponent>
   )

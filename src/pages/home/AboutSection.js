@@ -2,7 +2,7 @@ import SectionComponent from 'components/SectionComponent'
 import React, { useEffect, useState } from 'react'
 
 const text =
-  'Founded in 2021, Impactful Capital helps entrepreneurs launch projects that have a positive impact on people and planet.'
+  'Impactful capital helps founders and entrepreneurs solve some of the intractable challenges facing our planet. Our investment thematic includes clean air, clean water, climate change, energy equity and waste.'
 
   export default function AboutSection() {
   const [unitStamp, setUnitStamp] = useState(150)
